@@ -1,0 +1,8 @@
+<h1>zoom : {{controls.zoom}}</h1>
+<button (click)="increaseZoom()"> + </button>
+<button (click)="decreaseZoom()"> - </button>
+<br>
+<input type="text" [(ngModel)]="controls.center.lat">  
+<br>     
+<input type="text" [(ngModel)]="controls.center.lng">           
+<button (click)="updateCenter(controls.center.lat,controls.center.lng)">✓</button>
