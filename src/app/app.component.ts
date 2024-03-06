@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
+import { AppService } from './_services/app.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'mehir_pizuz';
+  constructor(private appService: AppService) { }
+
+
+  toggleSideBar() {
+    this.appService.isSideBarOpen = !this.appService.isSideBarOpen
+  }
+
 }

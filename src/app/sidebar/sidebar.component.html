@@ -1,8 +1,24 @@
-<h1>zoom : {{controls.zoom}}</h1>
-<button (click)="increaseZoom()"> + </button>
-<button (click)="decreaseZoom()"> - </button>
-<br>
-<input type="text" [(ngModel)]="controls.center.lat">  
-<br>     
-<input type="text" [(ngModel)]="controls.center.lng">           
-<button (click)="updateCenter(controls.center.lat,controls.center.lng)">✓</button>
+<div class="">
+  <h1>Zoom: {{ controls.zoom }}</h1>
+</div>
+<button (click)="increaseZoom()">+</button>
+<br />
+<button (click)="decreaseZoom()">-</button>
+<br />
+<input type="text" [(ngModel)]="controls.center.lat" />
+<br />
+<input type="text" [(ngModel)]="controls.center.lng" />
+<br />
+<button (click)="updateCenter(controls.center.lat, controls.center.lng)">
+  √
+</button>
+
+<br />
+<hr />
+<br />
+<div style="display: flex; justify-content: space-around">
+  <button (click)="flyToCity('rechovot')">Rechovot</button>
+  <button (click)="flyToCity('yavne')">Yavne</button>
+  <button (click)="flyToCity('petach_tikva')">Petach Tikva</button>
+  <button (click)="flyToCity('jerusalem')">Jerusalem</button>
+</div>

@@ -1,5 +1,20 @@
-<div class="wrapper">
-  <div class="header"></div>
-  <app-map class="content"></app-map>
-  <app-sidebar class="sidebar"></app-sidebar>
+<div class="main">
+  <div class="wrapper">
+    <div class="header">
+      <img
+        class="logo"
+        src="https://i.imagesup.co/images2/c7b0525608ceb81b48cf099101c51e288aa50521.png"
+        alt="logo"
+      />
+      <div class="">
+        <p>Explosion price</p>
+      </div>     
+      <div class="">
+        <button [routerLink]="['/']">LogOut</button>
+        <button (click)="toggleSideBar()">sidebar</button>
+      </div>
+    </div>
+
+    <router-outlet></router-outlet>
+  </div>
 </div>

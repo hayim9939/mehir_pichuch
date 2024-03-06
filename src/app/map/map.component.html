@@ -1,8 +1,9 @@
-<div class="map-container" 
-leaflet 
-[leafletOptions]="options"
-[leafletLayersControl]="layersControl"
-[(leafletZoom)]="controls.zoom"
-[(leafletCenter)]="controls.center"
+<div
+  class="map-cntainer"
+  leaflet
+  [leafletOptions]="options"
+  [leafletLayersControl]="layersControl"
+  [(leafletZoom)]="controls.zoom"
+  [(leafletCenter)]="controls.center"
+  (leafletMapReady)="onMapReady($event)"
 ></div>
-
