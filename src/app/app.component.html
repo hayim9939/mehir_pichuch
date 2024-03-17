@@ -8,13 +8,19 @@
       />
       <div class="">
         <p>Explosion price</p>
-      </div>     
+      </div>
       <div class="">
+        <!-- <button>sidebar</button> -->
         <button [routerLink]="['/']">LogOut</button>
-        <button (click)="toggleSideBar()">sidebar</button>
+        <button
+          pButton
+          pRipple
+          label="sidebar"
+          class="p-button-success"
+          (click)="toggleSideBar()"
+        ></button>
       </div>
     </div>
-
     <router-outlet></router-outlet>
   </div>
 </div>

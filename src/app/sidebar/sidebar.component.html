@@ -16,9 +16,20 @@
 <br />
 <hr />
 <br />
-<div style="display: flex; justify-content: space-around">
-  <button (click)="flyToCity('rechovot')">Rechovot</button>
-  <button (click)="flyToCity('yavne')">Yavne</button>
-  <button (click)="flyToCity('petach_tikva')">Petach Tikva</button>
-  <button (click)="flyToCity('jerusalem')">Jerusalem</button>
+<div
+  style="
+    display: flex;
+    justify-content: space-around;
+    max-width: 300px;
+    overflow: auto;
+  "
+>
+  <button
+    *ngFor="let city of sidebarService.cities$ | async"
+    (click)="flyToCity(city)"
+  >
+    {{ city.hebName }}
+
+    {{ city.boundingBox }}
+  </button>
 </div>

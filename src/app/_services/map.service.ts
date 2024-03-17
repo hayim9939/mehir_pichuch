@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Map, circle, latLng, polygon, tileLayer } from 'leaflet';
 import cities from './cities';
+import { City } from '../typing';
 
 @Injectable({
   providedIn: 'root'
@@ -33,11 +34,12 @@ export class MapService {
     this.controls.center = latLng(x, y);
   }
 
-  flyToCity(city: keyof typeof cities) {
-    const point: number[] = cities[city];
-    this.map?.flyTo(latLng(point[0], point[1]), point[2])
+  flyToCity(city: City) {
+    this.map?.fitBounds([[+city.boundingBox[0], +city.boundingBox[1]], [+city.boundingBox[2], +city.boundingBox[3]]]);
   }
-
+  // flyToCity(city: City) {
+  //   this.map?.flyTo(latLng(+city.lat, +city.lng), 15)
+  // }
 
   onMapReady(map: Map, layer: any) {
     this.map = map;
@@ -50,3 +52,7 @@ export class MapService {
 
   }
 }
+function latLngTuple(arg0: number, arg1: number): import("leaflet").LatLngTuple {
+  throw new Error('Function not implemented.');
+}
+

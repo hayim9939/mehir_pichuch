@@ -1,10 +1,14 @@
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+
 .main{
-  // background-image: url("https://images.pexels.com/photos/68704/pexels-photo-68704.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-  // background-repeat: no-repeat;
+  background: url("https://images.pexels.com/photos/68704/pexels-photo-68704.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
 }
 .wrapper {
-  height: 100vh;
-  width: 100%;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas: "header"
